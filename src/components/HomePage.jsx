@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, Instagram, Facebook } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useNavigate } from 'react-router-dom';
 import HeroSection from './HeroSection';
@@ -114,7 +114,7 @@ export default function HomePage() {
               </button>
               <Button
                 onClick={() => window.location.href = 'https://soujovemnapaz.lovable.app/'}
-                className="w-full bg-[#19F1DB] text-[#022466] hover:bg-[#92DEEB] font-bold py-3 rounded-full"
+                className="w-full bg-[#19F1DB] text-[#022466] hover:bg-[#92DEEB] font-bold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
               >
                 Confirmar presença
               </Button>
@@ -160,17 +160,19 @@ export default function HomePage() {
                   href="https://www.instagram.com/soujovemnapaz/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#92DEEB] hover:text-[#19F1DB] transition-colors"
+                  className="text-[#92DEEB] hover:text-[#19F1DB] transition-colors flex items-center gap-2"
                 >
-                  Instagram
+                  <Instagram size={20} />
+                  <span>Instagram</span>
                 </a>
                 <a
                   href="https://www.facebook.com/soujovemnapaz/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#92DEEB] hover:text-[#19F1DB] transition-colors"
+                  className="text-[#92DEEB] hover:text-[#19F1DB] transition-colors flex items-center gap-2"
                 >
-                  Facebook
+                  <Facebook size={20} />
+                  <span>Facebook</span>
                 </a>
               </div>
               <a
