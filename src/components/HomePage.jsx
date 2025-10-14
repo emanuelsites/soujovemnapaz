@@ -71,7 +71,7 @@ export default function HomePage() {
                 Patrocínio
               </button>
               <Button
-            onClick={() => window.open('https://soujovemnapaz.lovable.app/', '_blank')}
+        onClick={() => window.open('https://soujovemnapaz.lovable.app/', '_blank')}
                 className="bg-[#19F1DB] text-[#022466] hover:bg-[#92DEEB] font-bold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
               >
                 Confirmar presença
@@ -113,8 +113,7 @@ export default function HomePage() {
                 Patrocínio
               </button>
               <Button
-              onClick={() => { setIsMenuOpen(false); window.open('https://soujovemnapaz.lovable.app/', '_blank'); }}
-                className="w-full bg-[#19F1DB] text-[#022466] hover:bg-[#92DEEB] font-bold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
+           onClick={() => { setIsMenuOpen(false); window.open('https://soujovemnapaz.lovable.app/', '_blank'); }}                className="w-full bg-[#19F1DB] text-[#022466] hover:bg-[#92DEEB] font-bold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
               >
                 Confirmar presença
               </Button>
