@@ -117,7 +117,7 @@ export default function InscricaoPage() {
           cargoEclesiasticoOutros: '',
         });
         setSubmitted(false);
-        window.location.href = "https://soujovemnapaz.lovable.app/";
+        window.open("https://soujovemnapaz.lovable.app/", "_blank");
       }, 3000);
     } catch (error) {
       console.error('Erro ao enviar inscrição:', error);
