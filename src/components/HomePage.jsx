@@ -70,12 +70,14 @@ export default function HomePage() {
               >
                 Patrocínio
               </button>
-              <Button
-        onClick={() => window.open('https://soujovemnapaz.lovable.app/', '_blank')}
+<a
+                href="https://soujovemnapaz.lovable.app/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-[#19F1DB] text-[#022466] hover:bg-[#92DEEB] font-bold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
               >
                 Confirmar presença
-              </Button>
+              </a>
             </div>
 
             {/* Mobile menu button */}
@@ -112,12 +114,14 @@ export default function HomePage() {
               >
                 Patrocínio
               </button>
-              <Button
-           onClick={() => { setIsMenuOpen(false); window.open('https://soujovemnapaz.lovable.app/', '_blank'); }}
-                className="w-full bg-[#19F1DB] text-[#022466] hover:bg-[#92DEEB] font-bold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
+<a
+                href="https://soujovemnapaz.lovable.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full block text-center bg-[#19F1DB] text-[#022466] hover:bg-[#92DEEB] font-bold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
               >
                 Confirmar presença
-              </Button>
+              </a>
             </div>
           </div>
         )}
