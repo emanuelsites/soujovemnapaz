@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
-export default function HeroSection() {
+export default function HeroSection({ onOpenModal }) {
   
 
   return (
@@ -45,14 +45,12 @@ export default function HeroSection() {
           </p>
           
           <div className="flex flex-col items-center gap-3">
-            <a
-              href="https://soujovemnapaz.lovable.app/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={onOpenModal}
               className="bg-[#19F1DB] text-[#022466] hover:bg-[#92DEEB] font-bold text-lg px-12 py-6 rounded-full transition-all duration-300 hover:scale-110 shadow-2xl flex items-center justify-center"
             >
               CONFIRME SUA PRESENÇA
-            </a>
+            </button>
             <p className="text-[#19F1DB] text-sm md:text-base font-medium">
               e concorra a um moletom SJnP 2K25
             </p>

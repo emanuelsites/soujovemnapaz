@@ -9,10 +9,12 @@ import TestimonialsSection from './TestimonialsSection';
 import SponsorshipSection from './SponsorshipSection';
 import SweatshirtSection from './SweatshirtSection';
 import WhatsAppFloat from './WhatsAppFloat';
+import PresenceModal from './PresenceModal';
 
 export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -70,14 +72,12 @@ export default function HomePage() {
               >
                 Patrocínio
               </button>
-<a
-                href="https://soujovemnapaz.lovable.app/"
-                target="_blank"
-                rel="noopener noreferrer"
+<button
+                onClick={() => setIsModalOpen(true)}
                 className="bg-[#19F1DB] text-[#022466] hover:bg-[#92DEEB] font-bold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
               >
                 Confirmar presença
-              </a>
+              </button>
             </div>
 
             {/* Mobile menu button */}
@@ -114,21 +114,19 @@ export default function HomePage() {
               >
                 Patrocínio
               </button>
-<a
-                href="https://soujovemnapaz.lovable.app/"
-                target="_blank"
-                rel="noopener noreferrer"
+<button
+                onClick={() => setIsModalOpen(true)}
                 className="w-full block text-center bg-[#19F1DB] text-[#022466] hover:bg-[#92DEEB] font-bold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105"
               >
                 Confirmar presença
-              </a>
+              </button>
             </div>
           </div>
         )}
       </nav>
 
       {/* Sections */}
-      <HeroSection />
+      <HeroSection onOpenModal={() => setIsModalOpen(true)} />
       <AboutSection />
       <IdealizadoresSection />
       <TestimonialsSection />
@@ -136,7 +134,10 @@ export default function HomePage() {
       <SweatshirtSection />
 
       {/* WhatsApp Float Button */}
-      <WhatsAppFloat />
+      <WhatsAppFloat onOpenModal={() => setIsModalOpen(true)} />
+
+      {/* Presence Modal */}
+      <PresenceModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
 
       {/* Footer */}
       <footer className="bg-[#022466] text-white py-12">
